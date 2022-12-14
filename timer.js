@@ -28,12 +28,10 @@ $(document).ready(function () {
     const checkMinutes = Math.floor(TIME/60);
     const seconds = TIME % 60;
     const minutes = checkMinutes % 60;
-    t = hours < 10 ? hours : '0' + hours + ':' + minutes < 10 ? minutes : '0' + minutes + ':' + seconds < 10 ? seconds : '0' + seconds;
+
     timer.text(`${hours < 10 ? `0${hours}` : hours} : ${minutes < 10 ? `0${minutes}` : minutes} : ${seconds < 10 ? `0${seconds}` : seconds}`)
     TIME++
     console.log(TIME-1)
-
-    console.log(timer.text())
   }
 
   const init = () => {

@@ -6,20 +6,26 @@ $(document).ready(function () {
 
   let TIME = 0;
   let cron;
+  let check = 0;
 
   const startButton = () => {
-    updateTimer();
-    stopButton();
-    cron = setInterval(updateTimer, 1000);
+    if(check == 0) {
+      updateTimer();
+      stopButton();
+      cron = setInterval(updateTimer, 1000);
+      check = 1;
+    } else return false;
   }
 
   const stopButton = () => {
     clearInterval(cron);
+    check = 0;
   }
 
   const resetButton = () => {
-    timer.text('00:00:00');
+    timer.text('00 : 00 : 00');
     stopButton();
+    check = 0;
     return (TIME = 0);
   }
 

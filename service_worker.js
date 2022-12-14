@@ -4,7 +4,7 @@ const aFilesToCache = [
   "./",
   "./index.html",
   "./manifest.json",
-  "./images/hello-pwa.png",
+  "./images/timer.png",
 ];
 // 서비스워커 실행 & 캐시파일 저장
 self.addEventListener("install", (pEvent) => {
